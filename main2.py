@@ -17,8 +17,13 @@ if __name__ == "__main__":
     coroutine = do_some_work(2)
     #create a loop
     loop = asyncio.get_event_loop()
+    #use the coroutine object to create a task
+    #asyncio.ensure_future(coroutine) and loop.create_task(coroutine), both could be used to create the task
+    task =loop.create_task(coroutine)
+    print(task)#should be pending state
     #add the coroutine object into the loop, and start the loop
-    loop.run_until_complete(coroutine)
+    loop.run_until_complete(task)
+    print(task)  # should be finished state
     print('TIME: ', now() - start)
 
 
