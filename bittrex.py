@@ -1,11 +1,11 @@
 # import ccxt.async as ccxt
 
 import ccxt
-
+import config as config
 # create the exchange instance
 bittrex = getattr (ccxt, 'bittrex') ({
-            'apiKey': '',
-            'secret': ''
+            'apiKey': config.apiKey,
+            'secret': config.secret
         })
 
 # # print(bittrex)
