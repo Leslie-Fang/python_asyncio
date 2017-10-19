@@ -2,3 +2,12 @@ asyncio是Python 3.4版本引入的标准库，直接内置了对异步IO的支�
 
 资料：
 http://python.jobbole.com/87310/
+
+
+ In terms of the ccxt library, each exchange contains one or more trading markets. Each market has an id and a symbol.
+ exchange 就是交易所
+ markets 对应的就是一种1：1的货币种类的交易
+ symbol： symbols are pairs of base currency and quote currency.就是'SALT/ETH' 货币交易对
+ base is always before the slash, quote is always after the slash in any symbol and with any market.
+
+endpoint：Each exchange offers a set of API methods. Each method of the API is called an endpoint.

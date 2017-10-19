@@ -4,13 +4,13 @@ import ccxt
 
 # create the exchange instance
 bittrex = getattr (ccxt, 'bittrex') ({
-            'apiKey': 'a644796b09144d7a9e88102b7f113fe7',
-            'secret': 'bef51b9a1c3342b596c3c208fb4d44c0'
+            'apiKey': '',
+            'secret': ''
         })
 
 # # print(bittrex)
 #
-# # load all of the markets in the exchanges
+# # load all of the markets in the exchanges, you just need to call it once, any call of it later would use the data in the cache
 # markets = bittrex.load_markets ()
 # print (bittrex.id, markets)
 #
