@@ -11,8 +11,11 @@ bittrex = getattr (ccxt, 'bittrex') ({
 # # print(bittrex)
 #
 # # load all of the markets in the exchanges, you just need to call it once, any call of it later would use the data in the cache
-# markets = bittrex.load_markets ()
-# print (bittrex.id, markets)
+markets = bittrex.load_markets()
+print (bittrex.id)
+print(markets['LTC/BTC'])
+# for item in markets:
+#     print(item)
 #
 # etheur1 = bittrex.markets['SALT/ETH']      # get market structure by symbol; 'SALT/ETH' is the symbol and should be in the markets
 # print("etheur1 is {0}".format(etheur1))
@@ -28,8 +31,8 @@ bittrex = getattr (ccxt, 'bittrex') ({
 # symbols2 = list (bittrex.markets.keys ()) # same as previous line
 # print("symbols2 is {0}".format(symbols2))
 
-currencies = bittrex.currencies           # a list of currencies
-print("currencies is {0}".format(currencies))
+# currencies = bittrex.currencies           # a list of currencies
+# print("currencies is {0}".format(currencies))
 
 
 # kraken = ccxt.kraken ()

@@ -12,20 +12,28 @@ symbol = 'MANA/ETH'
 #
 # print (dir(bittrex.api))
 #
-# print(bittrex.fetchMarkets ())
+print(bittrex.fetchMarkets ())
+# markets = bittrex.fetchMarkets ()
+# for item in markets:
+#     print(item['symbol'])
 
 # print(bittrex.fetch_trades('MANA/ETH')) # same as print(bittrex.fetchTrades('MANA/ETH'))
-
+# trades = bittrex.fetch_trades('MANA/ETH')
+# for item in trades:
+#     print(item)
+#
 # get the order book for a specific symbol
-print(bittrex.fetch_order_book('MANA/ETH'))
+# print(bittrex.fetch_order_book('MANA/ETH'))
+#
+# # get the Market Price
+#
+# # Price Tickers
+# # print(bittrex.markets)
+# print(bittrex.fetch_ticker('MANA/ETH')) # ticker for LTC/ZEC
+# # symbols = list(bittrex.markets.keys())
 
-# get the Market Price
 
-# Price Tickers
-# print(bittrex.markets)
-print(bittrex.fetch_ticker('MANA/ETH')) # ticker for LTC/ZEC
-# symbols = list(bittrex.markets.keys())
-
+# print(bittrex.accountGetDepositaddress({'currency': 'BTC'}))
 
 # get trades
-print (bittrex.fetch_trades (symbol)[0])
+# print (bittrex.fetch_trades (symbol)[0])

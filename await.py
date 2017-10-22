@@ -3,9 +3,15 @@ import time
 
 now = lambda: time.time()
 
+async def myAwait(x):
+    print("In await; Before sleep")
+    time.sleep(x)
+    print("In await; After sleep")
+
 async def do_some_work(x):
     print('Waiting: ', x)
-    await asyncio.sleep(x)
+    #await asyncio.sleep(x)
+    await myAwait(x)
     return 'Done after {}s'.format(x)
 
 
