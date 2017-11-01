@@ -2,6 +2,7 @@
 
 import ccxt
 import config as config
+import os
 # create the exchange instance
 bittrex = getattr (ccxt, 'bittrex') ({
             'apiKey': config.apiKey,
@@ -14,6 +15,8 @@ bittrex = getattr (ccxt, 'bittrex') ({
 markets = bittrex.load_markets()
 print (bittrex.id)
 print(markets['LTC/BTC'])
+
+print(os.environ.get('Production'))
 # for item in markets:
 #     print(item)
 #
